@@ -1,3 +1,40 @@
-.header
-  background: pink
-  padding: 1em
+.home-wrapper header
+  width: 200px
+  padding: 2em 0
+  background: white
+
+  .header-position
+    position: fixed
+    top: 2em
+    bottom: 2em
+    left: 0
+    width: 200px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  .logo
+    +hide-text
+    height: 200px
+    padding: 0
+    margin: 0
+    background:
+      image: url(/assets/img/resolutionLogo@2x.png)
+      repeat: no-repeat
+      position: center
+      size: contain
+
+  .site-nav
+    ul
+      list-style: none
+      text-align: center
+
+      li
+        margin-bottom: 1em
+
+        &:last-child
+          margin-bottom: 0
+
+  .email-link
+    display: block
+    text-align: center
