@@ -1,2 +1,16 @@
 body
+  +font-smoothing(on)
   background-color: #eee
+  font-family: $base-font-family
+  +fluid-type(font-size, 320px, 1366px, 16px, 32px)
+
+  button
+    border: none
+    background: white
+    padding: .5em
+    margin-top: 1em
+    font-size: em(24px)
+    &:focus
+      outline: none
+    &:hover
+      cursor: pointer

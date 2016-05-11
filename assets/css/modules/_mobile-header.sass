@@ -1,0 +1,20 @@
+section#mobile-wrapper
+  +display(flex)
+  +justify-content(center)
+  align-items: center
+  +media(800px)
+    display: none
+
+  background:
+    color: $ResYellow
+    image: url(/assets/img/header-bg@2x.png)
+    size: cover
+
+  img.logo
+    width: 200px
+
+  a.hamburger-icon
+    display: block
+    position: absolute
+    top: 20px
+    right: 20px

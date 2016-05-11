@@ -1,5 +1,3 @@
-$(function() {
-
-	// $("body").hide();
+$(document).ready(function() {
 
 });
