@@ -18,7 +18,7 @@ Taylor made this rad new Resolution logo. It's fun and colorful and evokes the w
 
 ### Setting up my development environment.
 
-It's been some time since I have developed for the web, so I've been voraciously devouring every morsel of hot hot HTML5, CSS3, SASS, frameworks, mixins, libraries, etc. to figure out which buffet I want to belly up to.
+It's been some time since I have developed for the web, so I've been voraciously devouring every morsel of hot, hot HTML5, CSS3, SASS, frameworks, mixins, libraries, etc. to figure out which buffet I want to which I want to up-belly. (Not ending a sentence in a preposition sometimes requires making up new words).
 
 For this particular project I decided on the following:
 
