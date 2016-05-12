@@ -1,6 +1,6 @@
 # Resolutionathens-Redesign
 
-The new site for [Resolution Digital Type and Image](http://www.resolutionathens.com).
+The new site for [Resolution Digital Type and Image](http://www.resolutionathens.com). Updates will occasionally show up at [beta.resolutionathens.com](http://beta.resolutionathens.com).
 
 I'm going to use this space to design and develop in public. Eventually the notes I make here will become a case study.
 
