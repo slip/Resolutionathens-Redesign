@@ -11,18 +11,31 @@ It's been some time since I have developed for the web, so I've been voraciously
 For this particular project I decided on the following:
 
 * Atom
+
   > I built Sorba in Brackets and I liked it pretty well. I went back to Atom. It's a bit of a toss up, they are both great.
+
 * Git/Github
+
   > Obviously.
+
 * Sketch and Photoshop
+
    > So happy using Sketch. I only pop into PS for things. And a quick shout out to [Invision](https://www.invisionapp.com/) for their awesome craft plugin and Invision sync, and also to [Zeplin](https://zeplin.io/)… these guys make my life easier.
+
 * Jekyll
+
    > I built SorbaAtlanta, the Nucis space spec, and the current ResolutionAthens in WordPress, and PH9 in Joomla. That was fun, and I like CMS's. But I want this site to be crazy fast and stupid customizable. So I looked at static site generators. The ones I looked at seriously were [Jekyll](http://jekyllrb.com), [Middleman](http://middlemanapp.com/), [Hugo](https://gohugo.io/), and [Hammer](http://hammerformac.com/). I decided on [Jekyll](http://www.jekyllrb.com). So far I am happy with that decision, though I need to work out my gulp file.
+
 * SASS
+
    > I can't tell you how much I love SASS. It's a life changing thing. I've been using [Bourbon](http://www.bourbon.io) as well. I have Neat installed, which I used extensively when laying out SorbaAtlanta, but I've been doing everything in flexbox with stupid responsive type for Resolution.
+
 * Jade
+
    > I was using Emmet while developing Sorba, and it was pretty great, but once it was done, I still had HTML to edit. In the same way that SASS is prettier than CSS, Jade is just prettier than HTML.
+
 * jQuery
+
    > I guess this is something I have to know. I used a couple of plugins on SorbaAtlanta. I am going to try to do most of what I need by hand here.
 
 ### Getting Started
