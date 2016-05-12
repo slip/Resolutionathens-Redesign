@@ -6,7 +6,7 @@ I'm going to use this space to design and develop in public. Eventually the note
 
 ### Getting Started
 
-First, I steamboarded in the shower. Then I sat down with some index cards (my old and dear friends) and jotted down all kinds of things: architecture,  wireframes, feature wants, etc. Then I opened up Sketch.
+First, I steamboarded (finger-painting in the steam on the glass, help me make it a real verb!) in the shower. Then I sat down with some index cards (my old and dear friends) and jotted down all kinds of things: architecture,  wireframes, feature wants, etc. Then I opened up Sketch.
 
 I decided to do things the "right" way this time and design for mobile first: design the mobile portrait at 320px wide in Sketch, then media queries with min-widths in my code, breaking where the design breaks, not for standard device sizes.
 
