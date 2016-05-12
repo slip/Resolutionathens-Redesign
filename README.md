@@ -1,4 +1,4 @@
-# Resolutionathens-Redesign
+# Resolution Redesign
 
 The new site for [Resolution Digital Type and Image](http://www.resolutionathens.com). Updates will occasionally show up at [beta.resolutionathens.com](http://beta.resolutionathens.com).
 
@@ -36,7 +36,7 @@ For this particular project I decided on the following:
 
 * Jekyll
 
-   > I built SorbaAtlanta, the Nucis space spec, and the current ResolutionAthens in WordPress, and PH9 in Joomla. That was fun, and I like CMS's. But I want this site to be crazy fast and stupid customizable. So I looked at static site generators. The ones I looked at seriously were [Jekyll](http://jekyllrb.com), [Middleman](http://middlemanapp.com/), [Hugo](https://gohugo.io/), and [Hammer](http://hammerformac.com/). I decided on [Jekyll](http://www.jekyllrb.com). So far I am happy with that decision, though I need to work out my gulp file.
+   > I built [SorbaAtlanta](http://sorba.resolutionathens.com), the [Nucis space spec](http://nucis.imstillrad.com), and the current [ResolutionAthens](http://www.resolutionathens.com) in WordPress, and [PH9](http://www.penthousenumbernine.com) in Joomla. That was fun, and I like CMS's. But I want this site to be crazy fast and stupid customizable, and I don't need a database or visual text editor. So I looked at static site generators. The ones I looked at seriously were [Jekyll](http://jekyllrb.com), [Middleman](http://middlemanapp.com/), [Hugo](https://gohugo.io/), and [Hammer](http://hammerformac.com/). I decided on [Jekyll](http://www.jekyllrb.com). So far I am happy with that decision, though I need to work out my gulp file.
 
 * SASS
 
