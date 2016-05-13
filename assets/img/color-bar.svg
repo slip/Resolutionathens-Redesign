@@ -4,28 +4,28 @@
     <title>color-bar</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Resolution" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Mobile-Portrait" transform="translate(0.000000, -210.000000)">
             <g id="color-bar" transform="translate(-40.000000, 210.000000)">
                 <g id="Rectangle-1">
-                    <rect fill="#E6E325" x="0" y="0" width="20" height="5"></rect>
-                    <rect fill="#DE672B" x="20" y="0" width="20" height="5"></rect>
-                    <rect fill="#D8232A" x="40" y="0" width="20" height="5"></rect>
-                    <rect fill="#009949" x="60" y="0" width="20" height="5"></rect>
-                    <rect fill="#009D9C" x="80" y="0" width="20" height="5"></rect>
-                    <rect fill="#005A9B" x="100" y="0" width="20" height="5"></rect>
-                    <rect fill="#E6E325" x="120" y="0" width="20" height="5"></rect>
-                    <rect fill="#DE672B" x="140" y="0" width="20" height="5"></rect>
-                    <rect fill="#D8232A" x="160" y="0" width="20" height="5"></rect>
-                    <rect fill="#009949" x="180" y="0" width="20" height="5"></rect>
-                    <rect fill="#009D9C" x="200" y="0" width="20" height="5"></rect>
-                    <rect fill="#005A9B" x="220" y="0" width="20" height="5"></rect>
-                    <rect fill="#E6E325" x="240" y="0" width="20" height="5"></rect>
-                    <rect fill="#DE672B" x="260" y="0" width="20" height="5"></rect>
-                    <rect fill="#D8232A" x="280" y="0" width="20" height="5"></rect>
-                    <rect fill="#009949" x="300" y="0" width="20" height="5"></rect>
-                    <rect fill="#009D9C" x="320" y="0" width="20" height="5"></rect>
-                    <rect fill="#005A9B" x="340" y="0" width="20" height="5"></rect>
+                    <rect fill="#E6E325" x="0" y="0" width="40" height="5"></rect>
+                    <rect fill="#DE672B" x="40" y="0" width="40" height="5"></rect>
+                    <rect fill="#D8232A" x="80" y="0" width="40" height="5"></rect>
+                    <rect fill="#009949" x="120" y="0" width="40" height="5"></rect>
+                    <rect fill="#009D9C" x="160" y="0" width="40" height="5"></rect>
+                    <rect fill="#005A9B" x="200" y="0" width="40" height="5"></rect>
+                    <rect fill="#E6E325" x="240" y="0" width="40" height="5"></rect>
+                    <rect fill="#DE672B" x="280" y="0" width="40" height="5"></rect>
+                    <rect fill="#D8232A" x="320" y="0" width="40" height="5"></rect>
+                    <rect fill="#009949" x="360" y="0" width="40" height="5"></rect>
+                    <rect fill="#009D9C" x="400" y="0" width="40" height="5"></rect>
+                    <rect fill="#005A9B" x="440" y="0" width="40" height="5"></rect>
+                    <rect fill="#E6E325" x="480" y="0" width="40" height="5"></rect>
+                    <rect fill="#DE672B" x="520" y="0" width="40" height="5"></rect>
+                    <rect fill="#D8232A" x="560" y="0" width="40" height="5"></rect>
+                    <rect fill="#009949" x="600" y="0" width="40" height="5"></rect>
+                    <rect fill="#009D9C" x="640" y="0" width="40" height="5"></rect>
+                    <rect fill="#005A9B" x="680" y="0" width="40" height="5"></rect>
                 </g>
             </g>
         </g>

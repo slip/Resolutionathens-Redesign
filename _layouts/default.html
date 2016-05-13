@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <link rel="stylesheet" href="assets/css/main.min.css">
-  </head>
+    <meta name="keywords" content="Graphic Design,CSS,JavaScript, SASS, Jekyll">
+    <meta name="author" content="Ian Kennedy">
+    <meta name="description" content="Resolution is a small but mighty graphic design firm in Athens. Taylor will build your brand. Ian will build your website." />
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Resolution",
+        "url": "https://www.resolutionathens.com",
+        "sameAs": [
+            "https://twitter.com/ResolutionATH",
+            "https://www.facebook.com/resolutionathens/",
+        ]
+    }
+</script>
 
-  <body>
+<body>
 
     {{ content }}
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="assets/js/common.min.js"></script>
 
-  </body>
+</body>
+
 </html>
