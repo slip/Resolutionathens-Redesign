@@ -1,2 +1,22 @@
 section#process
-  background: $ResPurple
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  min-height: 300px
+
+  background:
+    color: $ResPurple
+    image: url(/assets/img/process-bg@2x.png)
+    repeat: no-repeat
+    size: cover
+    position: left center
+
+  .home-text
+    font-size: 1.375em
+    line-height: 1.75em
+    text-align: center
+
+button.process
+  +grow-shadow
+  color: $ResPurple

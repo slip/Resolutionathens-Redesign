@@ -3,7 +3,7 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,700,400italic);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1266,7 +1266,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #eee;
-  font-family: AvenirNext-Regular, Nunito, Helvetica, Arial, sans-serif; }
+  font-family: AvenirNext-Regular, Cabin, Helvetica, Arial, sans-serif; }
   body {
     font-size: 16px; }
     @media screen and (min-width: 320px) {
@@ -1393,7 +1393,7 @@ body {
     display: block;
     text-align: center; }
 
-section#mobile-wrapper {
+section#mobile-header {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1417,11 +1417,11 @@ section#mobile-wrapper {
   background-image: url(/assets/img/header-bg@2x.png);
   background-size: cover; }
   @media screen and (min-width: 800px) {
-    section#mobile-wrapper {
+    section#mobile-header {
       display: none; } }
-  section#mobile-wrapper img.logo {
-    width: 200px; }
-  section#mobile-wrapper a.hamburger-icon {
+  section#mobile-header img.logo {
+    width: 230px; }
+  section#mobile-header a.hamburger-icon {
     display: block;
     position: absolute;
     top: 20px;
@@ -1455,12 +1455,15 @@ section#about {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  min-height: 450px;
+  min-height: 300px;
   background-color: #009d9c;
   background-image: url(/assets/img/about-bg@2x.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom; }
+  @media screen and (min-width: 800px) {
+    section#about {
+      min-height: 450px; } }
   section#about .home-text {
     font-size: 1.5em;
     text-align: center; }
@@ -1631,10 +1634,122 @@ button.jennifer {
     transform: scale(1.1); }
 
 section#services {
-  background: #009949; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  min-height: 300px;
+  background-color: #009949;
+  background-image: url(/assets/img/services-bg@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center; }
+  section#services .home-text {
+    font-size: 1.5em;
+    line-height: 1.75em;
+    text-align: right; }
+
+button.services {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  color: #009949; }
+  button.services:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+    /* W3C */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity; }
+  button.services:hover, button.services:focus, button.services:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    /* move the element up by 5px */ }
+    button.services:hover:before, button.services:focus:before, button.services:active:before {
+      opacity: 1;
+      -webkit-transform: translateY(5px);
+      transform: translateY(5px);
+      /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */ }
 
 section#process {
-  background: #472d76; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 300px;
+  background-color: #472d76;
+  background-image: url(/assets/img/process-bg@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center; }
+  section#process .home-text {
+    font-size: 1.375em;
+    line-height: 1.75em;
+    text-align: center; }
+
+button.process {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, -webkit-transform;
+  transition-property: box-shadow, transform;
+  color: #472d76; }
+  button.process:hover, button.process:focus, button.process:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
 
 .site {
   max-width: 1200px;
