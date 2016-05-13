@@ -1,6 +1,8 @@
 # Resolution Redesign
 
-The new site for [Resolution Digital Type and Image](http://www.resolutionathens.com). Updates will occasionally show up at [beta.resolutionathens.com](http://beta.resolutionathens.com).
+Updates will occasionally show up at [beta.resolutionathens.com](http://beta.resolutionathens.com).
+
+I put up [Resolution Digital Type and Image](http://www.resolutionathens.com) as a stop-gap WP site to make sure that anyone who got a business card would actually see a site. Now it's time to make it fast and pretty. But am I being too cute with the hyper-responsiveness?
 
 I'm going to use this space to design and develop in public. Eventually the notes I make here will become a case study.
 
