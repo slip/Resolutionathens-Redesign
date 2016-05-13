@@ -1,33 +1,24 @@
-var gulp = require('gulp'),
-    browserSync = require('browser-sync'),
-    sass = require('gulp-sass'),
-    prefix = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    jshint = require('gulp-jshint'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    cp = require('child_process'),
-    jade = require('gulp-jade'),
-    bourbon = require('bourbon').includePaths;
+var gulp = require('gulp');
+var browserSync = require('browser-sync');
+var sass = require('gulp-sass');
+var prefix = require('gulp-autoprefixer');
+var cp = require('child_process');
+var jade = require('gulp-jade');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
-
 
 /**
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function(done) {
     browserSync.notify(messages.jekyllBuild);
-    var pl = process.platform === "win32" ? "jekyll.bat" : "jekyll";
-    return cp.spawn(pl, ['build'], {
+    return cp.spawn('jekyll', ['build'], {
             stdio: 'inherit'
         })
         .on('close', done);
 });
-
 
 /**
  * Rebuild Jekyll & do page reload
@@ -36,11 +27,10 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
     browserSync.reload();
 });
 
-
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -49,72 +39,46 @@ gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
     });
 });
 
-
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function() {
     return gulp.src('assets/css/main.sass')
         .pipe(sass({
-            includePaths: [bourbon],
+            includePaths: ['css'],
             onError: browserSync.notify
-        }).on('error', sass.logError))
+        }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
             cascade: true
         }))
-        .pipe(rename({
-            suffix: '.min',
-            prefix: ''
-        }))
-        .pipe(minifycss())
-        .pipe(gulp.dest('assets/css'))
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({
             stream: true
-        }));
+        }))
+        .pipe(gulp.dest('assets/css'));
 });
 
-
-/**
- * Compile Jade
+/*
+ * Travis is trying to Gulp stuff
  */
+
 gulp.task('jade', function() {
     return gulp.src('_jadefiles/*.jade')
         .pipe(jade())
         .pipe(gulp.dest('_includes'));
 });
 
-
-/*
- ** JS Task
- */
-gulp.task('js', function() {
-    return gulp.src('assets/js/common.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(concat('common.js'))
-        .pipe(gulp.dest('js'))
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(uglify())
-        // .pipe(gulp.dest('assets/js'))
-        .pipe(gulp.dest('_site/assets/js'));
-});
-
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function() {
-    //gulp.watch('assets/js/**/*.js', ['js']).on("change", browserSync.reload);
-    gulp.watch('_site/assets/**', ['browser-sync']);
-    gulp.watch('assets/css/**/*.sass', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch('assets/css/**', ['sass']);
+    gulp.watch('assets/js/**', ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['assets/js/**'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
 });
-
 
 /**
  * Default task, running just `gulp` will compile the sass,
