@@ -11,6 +11,9 @@
   +media(800px)
     display: block
 
+  a
+    padding: 0.25em
+
   .header-position
     position: fixed
     top: 0.5em
@@ -20,19 +23,6 @@
     display: flex
     flex-direction: column
     justify-content: space-between
-
-    a
-      +float-shadow
-      font-size: .75em
-      color: black
-      text-decoration: none
-      font-weight: bold
-      width: 100%
-
-      &:hover
-        color: white
-        padding: .25em
-        background: transparentize($ResBlue, 0.3)
 
     h1.logo
       flex-shrink: 0
@@ -57,10 +47,37 @@
 
       li
         margin-bottom: .75em
+        a
+          +float-shadow
+          font-size: .75em
+          color: black
+          text-decoration: none
+          font-weight: bold
+          width: 100%
+
+          &:hover, &:active
+            color: white
+            padding: .25em
+            background: transparentize($ResBlue, 0.3)
+
+        a.active
+          color: white
+          background: transparentize($ResBlue, 0.3)
+          pointer-events: none
+          cursor: default
 
         &:last-child
           margin-bottom: 0
 
   .email-link
-    display: block
     text-align: center
+    +float-shadow
+    font-size: .75em
+    color: black
+    text-decoration: none
+    font-weight: bold
+    width: 100%
+
+    &:hover, &:active
+      color: white
+      background: transparentize($ResBlue, 0.3)

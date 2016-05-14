@@ -13,6 +13,13 @@ $(document).ready(function() {
     });
   });
 
+  // inject active style into site-nav
+  $('.site-nav li').each(function() {
+    if ($(this).children('a').attr('href') == window.location.pathname) {
+      $(this).children('a').addClass('active');
+    }
+  });
+
   // google-analytics
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
