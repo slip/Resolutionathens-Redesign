@@ -1,0 +1,26 @@
+.home-wrapper
+  +display(flex)
+  min-height: 100vh
+
+header
+  flex-shrink: 0
+
+section
+  min-height: 350px
+  width: 100vw
+  margin: 0
+  padding: calc(.05 * 100vw)
+  +media(800px)
+    width: calc(100vw - (.23 * 100vw))
+
+  p
+    line-height: 1.75em
+    margin: 0
+    padding: 0
+    color: white
+
+.color-bar
+  height: 0.3em
+  width: 100%
+  background:
+    image: url(/assets/img/color-bar.svg)

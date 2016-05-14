@@ -1,3 +1,83 @@
-.header
-  background: pink
-  padding: 1em
+.home-wrapper header
+  display: none
+  width: 23%
+  padding: 2em 0
+  background:
+    color: $ResYellow
+    image: url(/assets/img/header-bg@2x.png)
+    background-size: cover
+    repeat: norepeat
+
+  +media(800px)
+    display: block
+
+  a
+    padding: 0.25em
+
+  .header-position
+    position: fixed
+    top: 0.5em
+    bottom: 1em
+    left: 0
+    width: 23%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    h1.logo
+      flex-shrink: 0
+      +hide-text
+      height: 25%
+      min-height: 200px
+      padding: 0
+      margin: 0
+      background:
+        image: url(/assets/img/resolutionLogo@2x.png)
+        repeat: no-repeat
+        position: center
+        size: contain
+
+  .site-nav
+    ul
+      list-style-position: inside
+      margin: 0
+      padding: 0
+      list-style: none
+      text-align: center
+
+      li
+        margin-bottom: .75em
+        a
+          +float-shadow
+          font-size: .75em
+          color: black
+          text-decoration: none
+          font-weight: bold
+          width: 100%
+
+          &:hover, &:active
+            color: white
+            padding: .25em
+            background: transparentize($ResBlue, 0.3)
+
+        a.active
+          color: white
+          background: transparentize($ResBlue, 0.3)
+          pointer-events: none
+          cursor: default
+
+        &:last-child
+          margin-bottom: 0
+
+  .email-link
+    text-align: center
+    +float-shadow
+    font-size: .75em
+    color: black
+    text-decoration: none
+    font-weight: bold
+    width: 100%
+
+    &:hover, &:active
+      color: white
+      background: transparentize($ResBlue, 0.3)

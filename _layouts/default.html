@@ -1,19 +1,57 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="assets/css/main.min.css">
-  </head>
+<!doctype html>
 
-  <body>
+<!--
+                  handmade by
+       resolution digital type and image
+    .-. .-. .-. .-. .   . . .-. .-. .-. . .
+    |(  |-  `-. | | |   | |  |   |  | | |\|
+    ' ' `-' `-' `-' `-' `-'  '  `-' `-' ' `
+              resolutionathens.com
+-->
 
-    {{ content }}
+<html lang="en">
 
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="assets/js/common.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="Resolution is a small but mighty graphic design firm in Athens, Georgia. Taylor will build your brand. Ian will build your website." />
+  <meta name="author" content="Resolution Digital Type and Image ~ resolutionathens.com">
+  <meta name="keywords" content="Graphic Design,CSS,JavaScript, SASS, Jekyll">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://resolutionathens.com" />
+  <meta property="og:title" content="Resolution Digital Type and Image ~ A small but mighty design firm in Athens, Georgia" />
+  <meta property="og:description" content="Resolution is a small but mighty graphic design firm in Athens. Taylor will build your brand. Ian will build your website." />
+  <meta property="og:image" content="http://resolutionathens.com/assets/img/ogp.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@ResolutionATH" />
+  <meta name="twitter:title" content="Resolution Digital Type and IMage" />
+  <meta name="twitter:description" content="A small but mighty graphic design firm in Athens, Georgia." />
+  <meta name="twitter:image" content="http://resolutionathens.com/assets/img/resolution-twitter-image@2x.png" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Resolution",
+    "url": "https://www.resolutionathens.com",
+    "sameAs": [
+      "https://www.twitter.com/ResolutionATH",
+      "https://www.facebook.com/resolutionathens/",
+    ]
+  }
+</script>
 
-  </body>
+<body>
+  {{ content }}
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/assets/js/common.js"></script>
+</body>
+
 </html>

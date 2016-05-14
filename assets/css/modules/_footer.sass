@@ -1,3 +1,30 @@
-.footer
-  background: gray
-  height: 3em
+section#footer
+  +display(flex)
+  +justify-content(center)
+  flex-direction: column
+  align-items: center
+  min-height: 250px
+
+  background:
+    color: $ResDarkGray
+    image: url(/assets/img/footer-bg@2x.gif)
+    size: cover
+    repeat: no-repeat
+    position: center bottom
+
+
+  p.home-text
+    font-size: 0.75em
+    text-align: center
+    line-height: 1.5em
+    margin-bottom: 1.5em
+    a
+      color: $ResYellow
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+  p.copyright
+    margin-top: 3em
+    margin-bottom: -2em
+    font-size: 0.5em
