@@ -1,4 +1,3 @@
 name: Resolution Digital Type and Image
 markdown: redcarpet
-highlighter: rouge # or pygments or null
-exclude: ["node_modules", "gulpfile.js", "package.json"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "README.md"]
