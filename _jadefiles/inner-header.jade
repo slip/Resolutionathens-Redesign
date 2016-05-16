@@ -1,12 +1,17 @@
+mixin inner-nav-content()
+  ul
+    li: a(href="/") Home
+    li: a(href="/portfolio/") Portfolio
+    li: a(href="/case-studies/") Case Studies
+    li: a(href="/contact/") Contact Us
+    li: a(href="/services/") Services
+    li: a(href="/process/") Process
+
+.mobile-nav
+  +inner-nav-content()
+
 header
   .header-position
     h1.logo Resolution Digital Type and Image
     nav.site-nav
-      ul
-        li: a(href="/") Home
-        li: a(href="/portfolio/") Portfolio
-        li: a(href="/case-studies/") Case Studies
-        li: a(href="/services/") Services
-        li: a(href="/process/") Process
-        
-    a(href="/contact/").email-link +email us
+      +inner-nav-content()
