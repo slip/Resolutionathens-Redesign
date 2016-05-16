@@ -1,0 +1,29 @@
+section#contact-form
+  // Begin MailChimp Signup Form
+   #mc_embed_signup
+     form#mc-embedded-subscribe-form.validate(action='//resolutionathens.us13.list-manage.com/subscribe/post?u=55a361ac45f0180a0edafbefc&id=2744e80962', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+       #mc_embed_signup_scroll
+         h2 Subscribe to our mailing list
+         .indicates-required
+           span.asterisk *
+           |  indicates required
+         .mc-field-group
+           label(for='mce-EMAIL')
+             | Email Address  
+             span.asterisk *
+           input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+         .mc-field-group
+           label(for='mce-FNAME') First Name 
+           input#mce-FNAME(type='text', value='', name='FNAME')
+         .mc-field-group
+           label(for='mce-LNAME') Last Name 
+           input#mce-LNAME(type='text', value='', name='LNAME')
+         #mce-responses.clear
+           #mce-error-response.response(style='display:none')
+           #mce-success-response.response(style='display:none')
+         // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+         div(style='position: absolute; left: -5000px;', aria-hidden='true')
+           input(type='text', name='b_55a361ac45f0180a0edafbefc_2744e80962', tabindex='-1', value='')
+         .clear
+           input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
+   // End mc_embed_signup
