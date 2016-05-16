@@ -1,12 +1,18 @@
+mixin nav-content()
+  ul
+    li: a(href="#about") About
+    li: a(href="#taylor") Taylor
+    li: a(href="#ian") Ian
+    li: a(href="#jennifer") Jennifer
+    li: a(href="#services") Services
+    li: a(href="#process") Process
+
+.mobile-nav
+  +nav-content()
+
 header
   .header-position
     h1.logo Resolution Digital Type and Image
     nav.site-nav
-      ul
-        li: a(href="#about") About
-        li: a(href="#taylor") Taylor
-        li: a(href="#ian") Ian
-        li: a(href="#jennifer") Jennifer
-        li: a(href="#services") Services
-        li: a(href="#process") Process
+      +nav-content()
     a(href="/contact").email-link +contact us
