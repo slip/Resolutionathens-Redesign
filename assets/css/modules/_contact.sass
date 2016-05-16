@@ -1,0 +1,80 @@
+section#contact-form
+  +display(flex)
+  +justify-content(space-around)
+  flex-direction: column
+  min-height: 300px
+  color: white
+
+  background:
+    color: $ResDarkGray
+    image: url(/assets/img/contact-form-bg@2x.jpg)
+    size: cover
+    repeat: no-repeat
+    position: center center
+
+  #mailchimp
+    +display(flex)
+    flex-direction: column
+    background: transparentize(white, 0.75)
+    border-radius: 1em
+    width: auto
+    padding: 1.5em
+    margin-bottom: 0.5em
+    text-align: right
+
+    .mc-field-group
+      +display(flex)
+      margin-bottom: 1.25em
+
+      label
+        font-weight: bold
+        margin-right: em(20px)
+        align-self: flex-end
+      input
+        flex-grow: 1
+        box-sizing: border-box
+        border-radius: 0.25em
+        width: auto
+        height: 100%
+        padding: 0.25em
+        margin-left: auto
+
+    .button.contact-form
+      +float-shadow
+      font-weight: bold
+      // border-radius: 0.25em
+      color: $ResGreen
+      width: auto
+      margin-top: 0.5em
+      margin-left: auto
+      margin-right: auto
+      &:hover
+        color: $ResPurple
+
+  .asterisk
+    margin-left: -20px
+    color: $ResRed
+  .indicates-required
+    text-align: left
+    font-size: 0.75em
+    margin-left: 2em
+
+section#contact-about
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  min-height: 200px
+  background:
+    color: $ResDarkGray
+    image: url(/assets/img/contact-about-bg@2x.jpg)
+    size: cover
+    repeat: no-repeat
+    position: center top
+  p
+    text-align: center
+  p.home-text
+    font-size: 2em
+    line-height: 1.5em
+    margin-bottom: 1em
+  p.contact-disclaimer
+    font-size: 0.5em

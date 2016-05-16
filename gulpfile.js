@@ -62,7 +62,6 @@ gulp.task('sass', function() {
     .pipe(rename({
       suffix: '.min',
     }))
-    // .pipe(gulp.dest('_site/assets/css/'))
     .pipe(gulp.dest('assets/css/'))
     .pipe(browserSync.reload({
       stream: true
@@ -88,7 +87,6 @@ gulp.task('js', function() {
       suffix: '.min'
     }))
     .pipe(uglify())
-    // .pipe(gulp.dest('_site/assets/js'));
     .pipe(gulp.dest('assets/js/'));
 });
 /**
