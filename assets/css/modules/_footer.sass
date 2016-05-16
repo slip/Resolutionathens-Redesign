@@ -1,9 +1,8 @@
 section#footer
-  +display(flex)
-  +justify-content(center)
+  display: flex
   flex-direction: column
-  align-items: center
-  min-height: 250px
+  justify-content: space-between
+  flex: 1
 
   background:
     color: $ResDarkGray
@@ -12,12 +11,12 @@ section#footer
     repeat: no-repeat
     position: center bottom
 
-
   p.home-text
     font-size: 0.75em
     text-align: center
     line-height: 1.5em
-    margin-bottom: 1.5em
+    margin-top: 1em
+    margin-bottom: 1em
     a
       color: $ResYellow
       text-decoration: none
@@ -25,6 +24,5 @@ section#footer
         text-decoration: underline
 
   p.copyright
-    margin-top: 3em
-    margin-bottom: -2em
     font-size: 0.5em
+    text-align: center
