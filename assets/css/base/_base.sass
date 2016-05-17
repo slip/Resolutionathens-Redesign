@@ -4,31 +4,50 @@ body
   font-family: $base-font-family
   +fluid-type(font-size, 320px, 3200px, 16px, 48px)
 
-  button
-    border: none
-    background: white
-    padding: .5em
-    margin-top: 1em
-    font-size: em(24px)
-    &:focus
-      outline: none
-    &:hover
-      cursor: pointer
+button
+  border: none
+  background: white
+  padding: .5em
+  margin-top: 1em
+  font-size: em(24px)
+  &:focus
+    outline: none
+  &:hover
+    cursor: pointer
 
-  .button
-    border: none
-    background: white
-    padding: .5em
-    margin-top: 1em
-    font-size: em(24px)
-    text-decoration: none
-    &:focus
-      outline: none
-    &:hover
-      cursor: pointer
+.button
+  border: none
+  background: white
+  padding: .5em
+  margin-top: 1em
+  font-size: em(24px)
+  text-decoration: none
+  &:focus
+    outline: none
+  &:hover
+    cursor: pointer
 
 hr.faded-hr
   color: white
   border: 0
   height: 1px
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))
+  width: 40%
+  margin-top: -0.5em
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0))
+
+figure
+	padding: 15px 30px 21px 90px
+	min-height: 70px
+	background:
+    color: transparentize(white, 0.85)
+    image: url(/assets/img/quote.svg)
+    repeat: no-repeat
+    size: em(50px)
+    position: 25px 25px
+	border-radius: em(10px)
+
+blockquote
+  font-size: 1em
+figcaption
+  margin-left: em(30px)
+  font-size: 0.75em

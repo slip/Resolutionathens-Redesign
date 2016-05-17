@@ -18,15 +18,11 @@ section#services
     line-height: 1.75em
     text-align: right
 
-  .button.services
-    +float-shadow
-    color: $ResGreen
-
 // resolutionathens.com/services/
 section#services-about
   display: flex
   flex-direction: column
-  justify-content: space-around
+  justify-content: center
   align-items: center
   min-height: 400px
   color: white
@@ -40,14 +36,36 @@ section#services-about
 
   .home-text
     font-size: 1.5em
-    line-height: 1.75em
+    line-height: 1.25em
     text-align: center
 
 section#services-list
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
   color: white
-  background:
-    color: $ResPurple
-    image: url(/assets/img/services-list-bg@2x.jpg)
-    repeat: no-repeat
-    size: cover
-    position: left center
+
+  &.print
+    background:
+      color: $ResPurple
+      image: url(/assets/img/services-list-print-bg@2x.jpg)
+      repeat: no-repeat
+      size: cover
+      position: left center
+
+  &.web
+    background:
+      color: $ResPurple
+      image: url(/assets/img/services-list-web-bg@2x.jpg)
+      repeat: no-repeat
+      size: cover
+      position: left center
+
+  .services
+    display: flex
+    justify-content: space-between
+    ul
+      list-style: none
+      padding: 0 2em
+      text-align: center
