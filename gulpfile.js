@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gulpsync = require('gulp-sync')(gulp);
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 var cp = require('child_process');
@@ -9,13 +10,18 @@ var jade = require('gulp-jade');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
-const gutil = require('gulp-util');
-const siteRoot = '_site';
-const jadeFiles = '_jadefiles/**/*.jade';
-const sassFiles = 'assets/css/**/*.sass';
-const jsFiles = 'assets/js/**/*.js';
+var gutil = require('gulp-util');
+var siteRoot = '_site';
+var jadeFiles = '_jadefiles/**/*.jade';
+var sassFiles = 'assets/css/**/*.sass';
+var jsFiles = 'assets/js/**/*.js';
 
-gulp.task('jekyll', ['sass', 'jade'],() => {
+var sassOptions = {
+  errLogToConsole: true,
+  outputStyle: 'expanded'
+};
+
+gulp.task('jekyll', ['sass', 'jade'], () => {
   const jekyll = cp.spawn('jekyll', ['build',
     '--watch',
     '--incremental',
@@ -51,10 +57,9 @@ gulp.task('serve', () => {
  */
 gulp.task('sass', function() {
   return gulp.src('assets/css/main.sass')
-    .pipe(sass({
-      includePaths: ['css'],
-      onError: browserSync.notify
-    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(prefix(['last 3 versions', '> 5%', 'ie 8', 'ie 7'], {
       cascade: true
     }))
