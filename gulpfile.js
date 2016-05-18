@@ -59,7 +59,6 @@ gulp.task('sass', function() {
   return gulp.src('assets/css/main.sass')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(sourcemaps.write())
     .pipe(prefix(['last 3 versions', '> 5%', 'ie 8', 'ie 7'], {
       cascade: true
     }))
@@ -67,6 +66,7 @@ gulp.task('sass', function() {
     .pipe(rename({
       suffix: '.min',
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css/'))
     .pipe(browserSync.reload({
       stream: true
