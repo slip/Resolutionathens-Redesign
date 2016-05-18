@@ -8,7 +8,7 @@ section#services
 
   background:
     color: $ResGreen
-    image: url(/assets/img/services-bg@2x.png)
+    image: url(/assets/img/services-bg@2x.jpg)
     repeat: no-repeat
     size: cover
     position: left center
@@ -29,14 +29,14 @@ section#services-about
 
   background:
     color: $ResGreen
-    image: url(/assets/img/services-bg@2x.png)
+    image: url(/assets/img/services-bg@2x.jpg)
     repeat: no-repeat
     size: cover
     position: left center
 
   .home-text
     font-size: 1.5em
-    line-height: 1.25em
+    line-height: 1.5em
     text-align: center
 
 section#services-list
@@ -64,8 +64,12 @@ section#services-list
 
   .services
     display: flex
-    justify-content: space-between
+    justify-content: center
     ul
       list-style: none
       padding: 0 2em
       text-align: center
+    li
+      margin-bottom: 0.5em
+      &:nth-child(2n)
+        font-weight: bold
