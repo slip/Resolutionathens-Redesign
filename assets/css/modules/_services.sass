@@ -1,9 +1,10 @@
+// resolutionathens.com
 section#services
   display: flex
   flex-direction: column
   justify-content: space-around
   align-items: flex-end
-  min-height: 300px
+  min-height: 400px
 
   background:
     color: $ResGreen
@@ -17,6 +18,58 @@ section#services
     line-height: 1.75em
     text-align: right
 
-  .button.services
-    +float-shadow
+// resolutionathens.com/services/
+section#services-about
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  min-height: 400px
+  color: white
+
+  background:
     color: $ResGreen
+    image: url(/assets/img/services-bg@2x.jpg)
+    repeat: no-repeat
+    size: cover
+    position: left center
+
+  .home-text
+    font-size: 1.5em
+    line-height: 1.5em
+    text-align: center
+
+section#services-list
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: white
+
+  &.print
+    background:
+      color: $ResPurple
+      image: url(/assets/img/services-list-print-bg@2x.jpg)
+      repeat: no-repeat
+      size: cover
+      position: left center
+
+  &.web
+    background:
+      color: $ResPurple
+      image: url(/assets/img/services-list-web-bg@2x.jpg)
+      repeat: no-repeat
+      size: cover
+      position: left center
+
+  .services
+    display: flex
+    justify-content: center
+    ul
+      list-style: none
+      padding: 0 2em
+      text-align: center
+    li
+      margin-bottom: 0.5em
+      &:nth-child(2n)
+        font-weight: bold
