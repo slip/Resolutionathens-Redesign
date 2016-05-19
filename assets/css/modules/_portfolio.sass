@@ -1,4 +1,4 @@
-section#process
+section#portfolio
   display: flex
   flex-direction: column
   justify-content: center
@@ -17,13 +17,16 @@ section#process
     line-height: 1.75em
     text-align: center
 
-section#process-about
+section#portfolio-about
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
   min-height: 250px
   color: white
+  a
+    color: $ResYellow
+    text-decoration: none
 
   background:
     color: $ResGreen
@@ -37,7 +40,7 @@ section#process-about
     line-height: 1.5em
     text-align: center
 
-section#process-method
+section#portfolio-method
   color: white
   display: flex
   flex-direction: column
@@ -45,10 +48,8 @@ section#process-method
   align-items: center
 
   background:
-    color: $ResBlue
-
-  .process-icon
-    margin: 1.5em
-
-  hr
-    margin-bottom: 2em
+    color: $ResDarkGray
+    image: url(/assets/img/process-page-bg@2x.jpg)
+    repeat: no-repeat
+    size: cover
+    position: left center
