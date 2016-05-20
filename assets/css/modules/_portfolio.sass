@@ -22,7 +22,7 @@ section#portfolio-about
   flex-direction: column
   justify-content: center
   align-items: center
-  min-height: 250px
+  min-height: 400px
   color: white
   a
     color: $ResYellow
@@ -45,7 +45,8 @@ section#portfolio-about
   display: flex
   flex-wrap: wrap
   overflow: hidden
-  margin-bottom: 2em
+  max-width: 100%
+  // margin-bottom: 2em
 
 .card
   display: flex
@@ -63,7 +64,7 @@ section#portfolio-about
     min-width: 30vw
 
 .card--600
-  min-width: 90vw
+  min-width: 85vw
   +media(800px)
     min-width: 60vw
 
@@ -81,12 +82,13 @@ section#portfolio-about
   padding: 1em
 
 .featherlight-content
-  padding: 1.25em!important
+  padding: em(32px)!important
   img
     min-width: 85vw
 
 .featherlight-close-icon
   color: white !important
   background: $ResRed !important
-  padding: 2px 4px !important
+  padding: 2px 3px !important
   border: 1px solid $ResRed
+  font-weight: bold
