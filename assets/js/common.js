@@ -18,6 +18,12 @@ $(document).ready(function() {
 
   ga('create', 'UA-77429513-1', 'auto');
   ga('send', 'pageview');
+  //testing
+  $(".card").click(function(event) {
+    var thisCard = $(this);
+    console.log(thisCard);
+    $.featherlight(thisCard.find('img').attr('src'));
+  });
 });
 
 function mobileNav() {
