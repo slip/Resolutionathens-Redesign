@@ -22,7 +22,7 @@ section#portfolio-about
   flex-direction: column
   justify-content: center
   align-items: center
-  min-height: 250px
+  min-height: 400px
   color: white
   a
     color: $ResYellow
@@ -30,26 +30,84 @@ section#portfolio-about
 
   background:
     color: $ResGreen
-    image: url(/assets/img/process-bg@2x.png)
+    image: url(/assets/img/portfolio-about-bg@2x.jpg)
     repeat: no-repeat
     size: cover
-    position: left center
+    position: center center
 
   .home-text
     font-size: 1.5em
     line-height: 1.5em
     text-align: center
 
-section#portfolio-method
-  color: white
+// portfolio gallery
+.cardGroup
+  display: flex
+  flex-wrap: wrap
+  overflow: hidden
+  max-width: 100%
+
+.card
+  display: flex
+  flex: 1 0 auto
+  justify-content: flex-end
+  flex-direction: column
+  overflow: hidden
+  margin: .25em
+  background: white
+  min-width: 150px
+  width: 100%
+  cursor: pointer
+
+.card--33
+  min-width: 30vw
+  +media(800px)
+    min-width: 25vw
+
+.card--50
+  min-width: 35vw
+  +media(800px)
+    min-width: 30vw
+
+.card--66
+  min-width: 60vw
+  +media(800px)
+    min-width: 55vw
+
+.card__image--responsive
   display: flex
   flex-direction: column
-  justify-content: flex-start
   align-items: center
+  justify-content: center
+  padding: em(20px)
+  img
+    max-width: 100%
 
-  background:
-    color: $ResDarkGray
-    image: url(/assets/img/process-page-bg@2x.jpg)
-    repeat: no-repeat
-    size: cover
-    position: left center
+.card__image--fixed
+  padding: em(20px)
+  img
+    width: 100%
+
+.card__label
+  text-align: center
+  color: $ResBlue
+  font-size: .75em
+  padding: 1em
+
+.featherlight-content
+  padding: em(32px)!important
+  max-width: 95%
+  margin: 5px
+
+.featherlight-image
+  max-width: 100%
+
+
+.featherlight-close-icon
+  color: white !important
+  background: $ResRed !important
+  border: 1px solid $ResRed
+  font-weight: bold
+  width: 2em!important
+  height: 2em!important
+  line-height: 1.9em!important
