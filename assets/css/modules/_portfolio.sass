@@ -56,23 +56,37 @@ section#portfolio-about
   margin: .25em
   background: white
   min-width: 150px
+  width: 100%
+  cursor: pointer
 
-.card--300
-  min-width: 50vw
+.card--33
+  min-width: 30vw
+  +media(800px)
+    min-width: 25vw
+
+.card--50
+  min-width: 35vw
   +media(800px)
     min-width: 30vw
 
-.card--600
-  min-width: 85vw
+.card--66
+  min-width: 60vw
   +media(800px)
-    min-width: 60vw
+    min-width: 55vw
 
-.card__image
+.card__image--responsive
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
   padding: em(20px)
+  img
+    max-width: 100%
+
+.card__image--fixed
+  padding: em(20px)
+  img
+    width: 100%
 
 .card__label
   text-align: center
@@ -82,12 +96,18 @@ section#portfolio-about
 
 .featherlight-content
   padding: em(32px)!important
-  img
-    min-width: 75vw
+  max-width: 95%
+  margin: 5px
+
+.featherlight-image
+  max-width: 100%
+
 
 .featherlight-close-icon
   color: white !important
   background: $ResRed !important
-  padding: 2px 3px !important
   border: 1px solid $ResRed
   font-weight: bold
+  width: 2em!important
+  height: 2em!important
+  line-height: 1.9em!important
