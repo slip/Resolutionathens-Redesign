@@ -47,8 +47,6 @@ section#process-method
   background:
     color: $ResBlue
 
-  .process-icon
-    margin: 1.5em
 
   hr
     margin-bottom: 2em
@@ -66,3 +64,23 @@ section#process-method
     text-decoration: none
     &:hover
       text-decoration: underline
+
+.phases
+  display: flex
+  flex-direction: row-reverse
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  margin: 1em
+  h3
+    margin-bottom: .5em
+
+.phase
+  flex-basis: 65%
+  flex-grow: 1
+  flex-shrink: 0
+  margin-bottom: 1em
+
+.process-icon
+  flex-basis: 160px
+  margin: 0 .5em 2em .5em
