@@ -14,7 +14,7 @@ I decided to do things the "right" way this time and design for mobile first: de
 
 ## Design Thoughts
 
-![](https://raw.githubusercontent.com/slip/Resolutionathens-Redesign/Add-Navigation-%231/assets/img/resolutionLogo%402x.png)
+![](http://beta.resolutionathens.com/assets/img/resolutionLogo@2x.png)
 
 Taylor made this rad new Resolution logo. It's fun and colorful and evokes the whole print/digital thing. And we're fun. When you come to our site I want you to know that we're fun. I want to give you a small story about us, a little piece of our personality. And I want to incorporate the feel of the logo. So I came up with [this](https://invis.io/5R79J6B8G) as a first stab. I don't want to greet you with a wall of text, list of services, big sales pitch, or our extensive portfolio. I want you to get to know us.
 
