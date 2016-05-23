@@ -19,3 +19,36 @@ section#ian
   .button.ian
     +float-shadow
     color: $ResOrange
+
+section#case-studies-about
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: white
+
+  background:
+    color: $ResOrange
+    image: url(/assets/img/case-study-bg.png)
+    repeat: no-repeat
+    size: contain
+    position: bottom center
+
+  .home-text
+    font-size: 1.5em
+    line-height: 1.5em
+    text-align: center
+
+.case-study-illustration
+  text-align: center
+  width: 100%
+  max-width: 640px
+  padding: 1em
+  border-radius: .5em
+  margin-bottom: 1.5em
+  margin-top: .5em
+  background:
+    color: transparentize(white, 0.1)
+
+  img
+    max-width: 100%
