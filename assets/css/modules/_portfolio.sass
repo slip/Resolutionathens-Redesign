@@ -46,6 +46,7 @@ section#portfolio-about
   flex-wrap: wrap
   overflow: hidden
   max-width: 100%
+  justify-content: space-between
 
 .card
   display: flex
@@ -53,35 +54,28 @@ section#portfolio-about
   justify-content: flex-end
   flex-direction: column
   overflow: hidden
-  margin: .25em
+  margin: .25em 0 .25em .25em
   background: white
   min-width: 150px
-  width: 100%
+  max-width: 100%
   cursor: pointer
 
 .card--33
-  min-width: 30vw
   +media(800px)
-    min-width: 25vw
+    max-width: 33%
 
 .card--50
-  min-width: 35vw
   +media(800px)
-    min-width: 30vw
+    max-width: 48%
 
 .card--66
-  min-width: 60vw
   +media(800px)
-    min-width: 55vw
+    max-width: 63%
 
 .card__image--responsive
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
   padding: em(20px)
   img
-    max-width: 100%
+    width: 100%
 
 .card__image--fixed
   padding: em(20px)
