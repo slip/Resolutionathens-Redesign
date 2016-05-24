@@ -1,26 +1,25 @@
 section#contact-form
-  #mc_embed_signup
-    form#mc-embedded-subscribe-form.validate(action='//resolutionathens.us13.list-manage.com/subscribe/post?u=55a361ac45f0180a0edafbefc&id=2744e80962', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-      #mailchimp
-        .mc-field-group
-          label(for='mce-FNAME') First Name:
-          input(type='text', value='', name='FNAME')
-        .mc-field-group
-          label(for='mce-LNAME') Last Name:
-          input(type='text', value='', name='LNAME')
-        .mc-field-group
-          label(for='mce-EMAIL')
-            span.asterisk * 
-            | Email:
-          input.required(type='email', value='', name='EMAIL')
-        #mce-responses.clear
-          #mce-error-response.response(style='display:none')
-          #mce-success-response.response(style='display:none')
-        div(style='position: absolute; left: -5000px;', aria-hidden='true')
-          input(type='text', name='b_55a361ac45f0180a0edafbefc_2744e80962', tabindex='-1', value='')
-        input.button.contact-form(type='submit', value='Talk to Us', name='subscribe')
-      .indicates-required
+  form(action='//resolutionathens.us13.list-manage.com/subscribe/post?u=55a361ac45f0180a0edafbefc&id=2744e80962', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+  #mailchimp
+    .mc-field-group
+      label(for='mce-FNAME') First Name:
+      input(type='text', value='', name='FNAME')
+    .mc-field-group
+      label(for='mce-LNAME') Last Name:
+      input(type='text', value='', name='LNAME')
+    .mc-field-group
+      label(for='mce-EMAIL')
         span.asterisk * 
-        |  indicates required
+        | Email:
+      input.required(type='email', value='', name='EMAIL')
+    #mce-responses.clear
+      #mce-error-response.response(style='display:none')
+      #mce-success-response.response(style='display:none')
+    div(style='position: absolute; left: -5000px;', aria-hidden='true')
+      input(type='text', name='b_55a361ac45f0180a0edafbefc_2744e80962', tabindex='-1', value='')
+    input.button.contact-form(type='submit', value='Talk to Us', name='subscribe')
+  .indicates-required
+    span.asterisk * 
+    |  indicates required
 
 .color-bar
