@@ -20,11 +20,14 @@ section#contact-about
     font-size: 0.5em
 
 section#contact-form
-  display: flex
+  display:flex
   flex-direction: column
+  flex-wrap: nowrap
+  justify-content: flex-start
+  align-content: flex-start
   align-items: center
   color: white
-  padding: 3em 0
+  padding: 3em 1em
 
   background:
     image: url(/assets/img/contact-form-bg@2x.jpg)
@@ -33,31 +36,31 @@ section#contact-form
     position: center center
 
   #mailchimp
-    font-size:
     display: flex
     flex-direction: column
+
     background: transparentize(white, 0.75)
     border-radius: 0.25em
     width: 100%
     padding: 2em 3em
     margin-bottom: 0.5em
-    text-align: right
 
     .mc-field-group
       display: flex
       margin-bottom: 1.25em
 
       label
-        font-weight: bold
-        margin-right: em(20px)
+        // font-weight: bold
+        margin-right: 1em
         align-self: flex-end
       input
         flex-grow: 1
         box-sizing: border-box
         border-radius: 0.25em
-        width: auto
         padding: 0.125em
-        margin-left: auto
+        @media screen and (max-width: 320px)
+          width: 100%
+
 
     .button.contact-form
       +float-shadow
