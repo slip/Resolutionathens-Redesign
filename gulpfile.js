@@ -2,13 +2,14 @@ var gulp = require('gulp');
 var gulpsync = require('gulp-sync')(gulp);
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
+var minifycss = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('gulp-autoprefixer');
-var minifycss = require('gulp-minify-css');
 var cp = require('child_process');
 var jade = require('gulp-jade');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var imageOptim = require('gulp-imageoptim');
 
 var gutil = require('gulp-util');
 var siteRoot = '_site';
@@ -16,12 +17,18 @@ var jadeFiles = '_jadefiles/**/*.jade';
 var sassFiles = 'assets/css/**/*.sass';
 var jsFiles = 'assets/js/**/*.js';
 
-var sassOptions = {
+var sassDevOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded'
-};
+}
 
-gulp.task('jekyll', ['sass', 'jade'], () => {
+var sassProdOptions = {
+  errLogToConsole: true,
+  outputStyle: 'compact'
+}
+
+
+gulp.task('jekyll', ['sass-prod', 'jade'], () => {
   const jekyll = cp.spawn('jekyll', ['build',
     '--watch',
     '--incremental',
@@ -38,6 +45,20 @@ gulp.task('jekyll', ['sass', 'jade'], () => {
   jekyll.stderr.on('data', jekyllLogger);
 });
 
+gulp.task('jekyll-prod', function() {
+  const jekyll = cp.spawn('jekyll', ['build']);
+
+  const jekyllLogger = (buffer) => {
+    buffer.toString()
+      .split(/\n/)
+      .forEach((message) => gutil.log('Jekyll: ' + message));
+  };
+
+  jekyll.stdout.on('data', jekyllLogger);
+  jekyll.stderr.on('data', jekyllLogger);
+});
+
+
 gulp.task('serve', () => {
   browserSync.init({
     files: [siteRoot + '/**'],
@@ -49,20 +70,17 @@ gulp.task('serve', () => {
 
   gulp.watch(jadeFiles, ['jade']);
   gulp.watch(jsFiles, ['js']);
-  gulp.watch(sassFiles, ['sass']);
+  gulp.watch(sassFiles, ['sass-prod']);
 });
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
-gulp.task('sass', function() {
+gulp.task('sass-dev', function() {
   return gulp.src('assets/css/main.sass')
     .pipe(sourcemaps.init())
-    .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(prefix(['last 3 versions', '> 5%', 'ie 8', 'ie 7'], {
-      cascade: true
-    }))
-    .pipe(minifycss())
+    .pipe(sass(sassDevOptions).on('error', sass.logError))
+    .pipe(prefix())
     .pipe(rename({
       suffix: '.min',
     }))
@@ -72,6 +90,18 @@ gulp.task('sass', function() {
       stream: true
     }))
 });
+
+gulp.task('sass-prod', function() {
+  gulp.src('assets/css/main.sass')
+    .pipe(sass(sassProdOptions).on('error', sass.logError))
+    .pipe(prefix())
+    .pipe(minifycss())
+    .pipe(rename({
+      suffix: '.min',
+    }))
+    .pipe(gulp.dest('assets/css/'))
+});
+
 /*
  * Compile Jade into _includes
  */
@@ -94,8 +124,21 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(gulp.dest('assets/js/'));
 });
+
+// optimize images
+gulp.task('images', function() {
+  return gulp.src('assets/img/**/*')
+    .pipe(imageOptim.optimize({
+      jpegmini: true
+    }))
+    .pipe(gulp.dest('_site/assets/img'));
+});
+
+
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', gulpsync.sync(['jekyll', 'sass', 'js', 'jade', 'serve']));
+
+gulp.task('prod', gulpsync.sync(['js', 'jade', 'sass-prod', 'jekyll-prod', 'images']));
+gulp.task('default', gulpsync.sync(['jekyll', 'sass-dev', 'js', 'jade', 'serve']));
