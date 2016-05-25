@@ -140,5 +140,5 @@ gulp.task('images', function() {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 
-gulp.task('prod', gulpsync.sync(['js', 'jade', 'sass-prod', 'jekyll-prod', 'images']));
+gulp.task('prod', gulpsync.sync(['js', 'jade', 'sass-prod', 'jekyll-prod']));
 gulp.task('default', gulpsync.sync(['jekyll', 'sass-dev', 'js', 'jade', 'serve']));
