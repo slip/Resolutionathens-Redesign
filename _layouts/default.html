@@ -16,13 +16,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
   <title>{{ page.title }}</title>
-  <meta name="description" content="Resolution is a small but mighty graphic design firm in Athens, Georgia. Taylor will build your brand. Ian will build your website." />
+  <link rel="canonical" href="http://resolutionathens.com/"/>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
   <meta name="author" content="Resolution Digital Type and Image ~ resolutionathens.com">
-  <meta name="keywords" content="Graphic Design,CSS,JavaScript, SASS, Jekyll">
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Resolution"/>
   <meta property="og:url" content="http://resolutionathens.com" />
   <meta property="og:title" content="Resolution Digital Type and Image ~ A small but mighty design firm in Athens, Georgia" />
-  <meta property="og:description" content="Resolution is a small but mighty graphic design firm in Athens. Taylor will build your brand. Ian will build your website." />
+  {% if page.description %}<meta property="og:description" content="{{ page.description }}" />{% endif %}
   <meta property="og:image" content="http://resolutionathens.com/assets/img/ogp.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="400" />
