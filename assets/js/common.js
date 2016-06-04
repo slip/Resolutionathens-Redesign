@@ -2,7 +2,6 @@ $(document).ready(function() {
   innerMenuActiveLinks();
   smoothScroll();
   mobileNav();
-
   // google-analytics
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -25,6 +24,21 @@ $(document).ready(function() {
     console.log(thisCard);
     $.featherlight(thisCard.find('img').attr('src'));
   });
+});
+
+// section-scale
+$(window).on('scroll', function() {
+    y = $(window).scrollTop();
+    $('#ian').css('background-size', 100 + parseInt(y / 65, 0) + '% ');
+});
+
+// color-bar-scroll
+$(window).bind("load resize scroll", function(e) {
+  var y = $(window).scrollTop();
+  $(".color-bar").filter(function() {
+    return $(this).offset().top < (y + $(window).height()) &&
+      $(this).offset().top + $(this).height() > y;
+  }).css('background-position', parseInt(y / 10) + 'px');
 });
 
 function mobileNav() {
