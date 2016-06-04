@@ -1,0 +1,28 @@
+             handmade by
+  resolution digital type and image
+.-. .-. .-. .-. .   . . .-. .-. .-. . .
+|(  |-  `-. | | |   | |  |   |  | | |\|
+' ' `-' `-' `-' `-' `-'  '  `-' `-' ' `
+        resolutionathens.com
+
+/* TEAM */
+
+Designer/Developer: Ian Kennedy
+Designer: Taylor Little
+
+Site: http://resolutionathens.com
+
+Twitter: ResolutionATH
+
+Location: Athens, Georgia
+
+
+/* SITE */
+
+Last update: 2016/06/04
+
+Standards: HTML5, CSS3
+
+Components: jQuery, featherlight
+
+Software: Jekyll, Gulp, Atom
