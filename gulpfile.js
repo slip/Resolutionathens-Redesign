@@ -10,12 +10,12 @@ var jade = require('gulp-jade');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var imageOptim = require('gulp-imageoptim');
-
 var gutil = require('gulp-util');
 var siteRoot = '_site';
 var jadeFiles = '_jadefiles/**/*.jade';
 var sassFiles = 'assets/css/**/*.sass';
 var jsFiles = 'assets/js/**/*.js';
+var concat = require('gulp-concat');
 
 var sassDevOptions = {
   errLogToConsole: true,
@@ -81,6 +81,7 @@ gulp.task('sass-dev', function() {
     .pipe(sourcemaps.init())
     .pipe(sass(sassDevOptions).on('error', sass.logError))
     .pipe(prefix())
+    .pipe(minifycss())
     .pipe(rename({
       suffix: '.min',
     }))
@@ -117,10 +118,10 @@ gulp.task('jade', function() {
  ** minify and uglify js.
  */
 gulp.task('js', function() {
-  return gulp.src('assets/js/common.js')
-    .pipe(rename({
-      suffix: '.min'
-    }))
+  return gulp.src(['assets/js/res.js', 'assets/js/wow.js'])
+    .pipe(concat('common.js'))
+    .pipe(gulp.dest('assets/js/'))
+    .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js/'));
 });
