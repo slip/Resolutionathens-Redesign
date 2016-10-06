@@ -1,18 +1,71 @@
-section#about
+#about
+  margin: 24px 0
+  padding: 10px
+
+img.poster
+  width: calc(100% - 20px)
+  max-height: 100vh
+
+hr
+  border: 0
+  height: 1px
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, .25), rgba(0, 0, 0, 0));
+  width: 100%
+
+.headline
+  width: 100%
+  img
+    height: 50px
+
+// team section
+.team
   display: flex
-  justify-content: center
+  flex-wrap: wrap
+  justify-content: space-around
+  width: 100%
+
+  .teammate
+    width: 40%
+    img
+      width: 100%
+
+.teammate-name
+  font-family: "Arial Narrow", Arial, sans-serif
+  font-size: 14px
+  font-weight: 600
+  text-transform: uppercase
+  margin-bottom: 0px
+
+.teammate-title
+  font-family: "brix-slab", sans-serif
+  font-size: 14px
+
+// client section
+.client
+  display: flex
+  justify-content: space-around
   align-items: center
-  min-height: 300px
-  +media(800px)
-    min-height: 450px
+  height: 160px
 
+.client-pic
+  width: 120px
+  height: 120px
+  +filter(grayscale(100%))
+
+.client-info
+  padding: 6px
+  p.client-title
+    color: $ResDarkGray
+    font-family: "Arial Narrow", Arial, sans-serif
+    font-size: 14px
+    font-weight: 600
+    text-transform: uppercase
+    margin-bottom: 0px
+  p.client-desc
+    font-family: "brix-slab", sans-serif
+    font-size: 12px
+
+.screened-bg
   background:
-    color: $ResTeal
-    image: url(/assets/img/about-bg@2x.jpg)
-    repeat: no-repeat
-    size: cover
-    position: left center
-
-  .home-text
-    font-size: 1.5em
-    text-align: center
+    image: url(/assets/img/tile1-ik.svg)
+    repeat: repeat

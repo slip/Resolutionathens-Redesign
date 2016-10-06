@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+  <defs>
+    <style>
+      .a {
+        opacity: 0.5;
+      }
+
+      .b {
+        fill: #cfcfcf;
+      }
+    </style>
+  </defs>
+  <title>tile-md</title>
+  <g class="a">
+    <g>
+      <circle class="b" cx="2.5" cy="2.5" r="0.65"/>
+      <path class="b" d="M5,.65V0H4.35A.65.65,0,0,0,5,.65Z"/>
+      <path class="b" d="M.65,0H0V.65A.65.65,0,0,0,.65,0Z"/>
+      <path class="b" d="M0,4.35V5H.65A.65.65,0,0,0,0,4.35Z"/>
+      <path class="b" d="M4.35,5H5V4.35A.65.65,0,0,0,4.35,5Z"/>
+    </g>
+  </g>
+  <g class="a">
+    <g>
+      <circle class="b" cx="7.5" cy="2.5" r="0.65"/>
+      <path class="b" d="M10,.65V0H9.35A.65.65,0,0,0,10,.65Z"/>
+      <path class="b" d="M5.65,0H5V.65A.65.65,0,0,0,5.65,0Z"/>
+      <path class="b" d="M5,4.35V5h.65A.65.65,0,0,0,5,4.35Z"/>
+      <path class="b" d="M9.35,5H10V4.35A.65.65,0,0,0,9.35,5Z"/>
+    </g>
+  </g>
+  <g class="a">
+    <g>
+      <circle class="b" cx="2.5" cy="7.5" r="0.65"/>
+      <path class="b" d="M5,5.65V5H4.35A.65.65,0,0,0,5,5.65Z"/>
+      <path class="b" d="M.65,5H0v.65A.65.65,0,0,0,.65,5Z"/>
+      <path class="b" d="M0,9.35V10H.65A.65.65,0,0,0,0,9.35Z"/>
+      <path class="b" d="M4.35,10H5V9.35a.65.65,0,0,0-.65.65Z"/>
+    </g>
+  </g>
+  <g class="a">
+    <g>
+      <circle class="b" cx="7.5" cy="7.5" r="0.65"/>
+      <path class="b" d="M10,5.65V5H9.35a.65.65,0,0,0,.65.65Z"/>
+      <path class="b" d="M5.65,5H5v.65A.65.65,0,0,0,5.65,5Z"/>
+      <path class="b" d="M5,9.35V10h.65A.65.65,0,0,0,5,9.35Z"/>
+      <path class="b" d="M9.35,10H10V9.35a.65.65,0,0,0-.65.65Z"/>
+    </g>
+  </g>
+</svg>
