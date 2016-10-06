@@ -1,25 +1,24 @@
 .home-wrapper header
+  +span-columns(3)
   display: none
-  width: 23%
   padding: 2em 0
+  order: 1
   background:
-    color: $ResYellow
-    image: url(/assets/img/header-bg@2x.jpg)
-    background-size: cover
-    repeat: norepeat
+    image: url(/assets/img/tile1-ik.svg)
+    repeat: repeat
 
-  +media(800px)
+  +media($bp-laptop)
     display: block
 
   a
     padding: 0.25em
 
   .header-position
+    +span-columns(3)
     position: fixed
-    top: 0.5em
-    bottom: 1em
-    left: 0
-    width: 23%
+    top: 32px
+    bottom: 32px
+    right: 0
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -27,12 +26,11 @@
     h1.logo
       flex-shrink: 0
       +hide-text
-      height: 20%
-      min-height: 150px
+      height: 150px
       padding: 0
       margin: 0
       background:
-        image: url(/assets/img/resolutionLogo@2x.png)
+        image: url(/assets/img/resolution-logo.svg)
         repeat: no-repeat
         position: center
         size: contain
@@ -49,6 +47,7 @@
       a
         img
           +float-shadow
+          width: 30px
 
   .site-nav
     ul
@@ -61,7 +60,6 @@
       li
         margin-bottom: .75em
         a
-          +float-shadow
           font-size: .75em
           color: black
           text-decoration: none
@@ -69,13 +67,16 @@
           width: 100%
 
           &:hover, &:active
-            color: white
+            color: transparentize($ResDarkGray, 0.3)
             padding: .25em
-            background: transparentize($ResBlue, 0.3)
+            background:
+              image: url(/assets/img/tile1-ik.svg)
+              repeat: repeat
+
 
         a.active
           color: white
-          background: transparentize($ResBlue, 0.3)
+          background: transparentize($ResLightGray, 0.3)
           pointer-events: none
           cursor: default
 

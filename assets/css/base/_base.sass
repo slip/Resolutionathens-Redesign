@@ -1,40 +1,61 @@
+html
+  background-color: $ResLightGray
+
 body
   +font-smoothing(on)
-  background-color: #eee
-  font-family: $base-font-family
-  +fluid-type(font-size, 320px, 3200px, 16px, 48px)
+  background-color: $ResLightGray
 
-hr.faded-hr
-  color: white
-  border: 0
-  height: 1px
-  width: 40%
-  margin-top: -0.5em
-  margin-bottom: 1em
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0))
+section
+  background-color: $ResLightGray
 
-.texty
-  padding-left: 3em
-  padding-right: 3em
-
-h1,h2,h3,h4,h5,h6
-  margin-top: 0
-
-figure
-  margin: 2em 0.5em
-  padding: 15px 20px 30px 20px
-  // min-height: 70px
-  background:
-    color: transparentize(white, 0.85)
-    image: url(/assets/img/quote.svg)
-    repeat: no-repeat
-    size: em(20px)
-    position: 15px 41px
-  border-radius: em(10px)
-
-
-blockquote
+// typography
+h1
+  color: $h1-color
+  font-family: $h1-font-family
   font-size: 1em
-figcaption
-  margin-left: em(40px)
-  font-size: 0.75em
+  font-weight: 300
+  letter-spacing: 1px
+  text-transform: uppercase
+  line-height: normal
+  +media($bp-laptop)
+    font-size: 2em
+
+h2
+  color: $h2-color
+  font-family: $h2-font-family
+  font-size: 2em
+  font-weight: 300
+  letter-spacing: 1px
+  line-height: normal
+  +media($bp-laptop)
+    font-size: 3em
+
+p
+  font-size: 1em
+  color: $p-color
+  font-family: $base-font-family
+  line-height: $base-line-height
+  +media($bp-laptop)
+    font-size: 1.5em
+
+a
+  color: $ResBlue
+
+// alignment
+.full-width
+  width: 100%
+
+.bottom-12
+  margin-bottom: 12px
+  +media($bp-laptop)
+    margin-bottom: 24px
+    
+.bottom-24
+  margin-bottom: 24px
+  +media($bp-laptop)
+    margin-bottom: 48px
+
+.bottom-48
+  margin-bottom: 48px
+  +media($bp-laptop)
+    margin-bottom: 96px

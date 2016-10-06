@@ -1,6 +1,5 @@
 html {
   font-family: sans-serif; /* 1 */
-
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -65,10 +64,16 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  margin: 0.67em 0;
 
-  font-size: 2em;
+h1,
+h2 {
+  margin: 0;
+  -webkit-margin-before:0;
+  -webkit-margin-after:0;
+}
+
+p {
+  margin: 0;
 }
 mark {
   color: #000;
@@ -110,9 +115,11 @@ figure {
 }
 hr {
   overflow: visible; /* 2 */
-
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
+  margin: 0;
+  -webkit-margin-before:0;
+  -webkit-margin-after:0;
 }
 button,
 input,

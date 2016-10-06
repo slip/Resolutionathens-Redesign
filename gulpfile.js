@@ -6,7 +6,7 @@ var minifycss = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('gulp-autoprefixer');
 var cp = require('child_process');
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var imageOptim = require('gulp-imageoptim');
@@ -70,7 +70,7 @@ gulp.task('serve', () => {
 
   gulp.watch(jadeFiles, ['jade']);
   gulp.watch(jsFiles, ['js']);
-  gulp.watch(sassFiles, ['sass-prod']);
+  gulp.watch(sassFiles, ['sass-dev']);
 });
 
 /**
@@ -81,7 +81,6 @@ gulp.task('sass-dev', function() {
     .pipe(sourcemaps.init())
     .pipe(sass(sassDevOptions).on('error', sass.logError))
     .pipe(prefix())
-    .pipe(minifycss())
     .pipe(rename({
       suffix: '.min',
     }))
@@ -108,7 +107,7 @@ gulp.task('sass-prod', function() {
  */
 gulp.task('jade', function() {
   return gulp.src('_jadefiles/**/*.jade')
-    .pipe(jade())
+    .pipe(pug())
     .pipe(rename({
       dirname: ''
     }))
@@ -134,7 +133,6 @@ gulp.task('images', function() {
     }))
     .pipe(gulp.dest('_site/assets/img'));
 });
-
 
 /**
  * Default task, running just `gulp` will compile the sass,
