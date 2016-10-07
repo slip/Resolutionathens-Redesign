@@ -11,7 +11,7 @@
   text-align: center
 
 img.poster
-  width: calc(100% - 20px)
+  max-width: calc(100% - 20px)
   max-height: 100vh
 
 hr
@@ -43,25 +43,41 @@ hr
   font-weight: 600
   text-transform: uppercase
   margin-bottom: 0px
+  +media($bp-laptop)
+    font-size: 16px
+
 
 .teammate-title
   font-family: "brix-slab", sans-serif
   font-size: 14px
+  +media($bp-laptop)
+    font-size: 16px
+
 
 // client section
 .client
   display: flex
-  justify-content: space-around
+  justify-content: flex-start
   align-items: center
   height: 160px
+  +media($bp-laptop)
+    height: 280px
 
 .client-pic
+  +filter(grayscale(100%))
   width: 120px
   height: 120px
-  +filter(grayscale(100%))
+  +media($bp-laptop)
+    width: 240px
+    height: 240px
+
 
 .client-info
+  margin-left: 10px
   padding: 6px
+  +media($bp-laptop)
+    margin-left: 24px
+
   p.client-title
     color: $ResDarkGray
     font-family: "Arial Narrow", Arial, sans-serif
@@ -69,9 +85,14 @@ hr
     font-weight: 600
     text-transform: uppercase
     margin-bottom: 0px
+    +media($bp-laptop)
+      font-size: 18px
+
   p.client-desc
     font-family: "brix-slab", sans-serif
     font-size: 12px
+    +media($bp-laptop)
+      font-size: 16px
 
 .screened-bg
   background:
