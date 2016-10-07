@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320 30">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+      }
+
+      .b {
+        fill: #cfcfcf;
+      }
+
+      .c {
+        fill: url(#a);
+      }
+    </style>
+    <pattern id="a" data-name="New Pattern Swatch 3" width="8" height="8" patternTransform="translate(0 -3.9125)" patternUnits="userSpaceOnUse" viewBox="0 0 8 8">
+      <rect class="a" width="8" height="8"/>
+      <g>
+        <circle class="b" cx="4" cy="4" r="1.04"/>
+        <path class="b" d="M8,1.04A1.04,1.04,0,0,1,6.96,0H8V1.04Z"/>
+        <path class="b" d="M1.04,0A1.04,1.04,0,0,1,0,1.04V0H1.04Z"/>
+        <path class="b" d="M0,6.96A1.04,1.04,0,0,1,1.04,8H0V6.96Z"/>
+        <path class="b" d="M6.96,8A1.04,1.04,0,0,1,8,6.96V8Z"/>
+      </g>
+    </pattern>
+  </defs>
+  <title>divider</title>
+  <rect class="c" width="320" height="30"/>
+</svg>
