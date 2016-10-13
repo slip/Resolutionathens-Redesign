@@ -9,6 +9,11 @@
 .poster-container
   width: 100%
   text-align: center
+  +media($bp-tablet)
+    margin-top: 3em
+  +media($bp-tablet)
+    margin-top: 0
+
 
 img.poster
   max-width: calc(100% - 20px)
@@ -56,29 +61,23 @@ hr
 
 // client section
 .client
-  padding: 24px 0
   display: flex
-  flex-wrap: wrap
   justify-content: flex-start
   align-items: center
+  height: 160px
   +media($bp-laptop)
     height: 280px
 
 .client-pic
-  // flex: 1 0 0
   +filter(grayscale(100%))
-  width: 100px
-  height: 100px
-  +media($bp-tablet)
-    width: 130px
-    height: 130px
+  width: 120px
+  height: 120px
   +media($bp-laptop)
-    width: 160px
-    height: 160px
+    width: 240px
+    height: 240px
 
 
 .client-info
-  flex: 2 0 0
   margin-left: 10px
   padding: 6px
   +media($bp-laptop)
@@ -93,7 +92,6 @@ hr
     margin-bottom: 0px
     +media($bp-laptop)
       font-size: 18px
-      margin-bottom: 12px
 
   p.client-desc
     font-family: "brix-slab", sans-serif
