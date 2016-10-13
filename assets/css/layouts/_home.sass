@@ -1,13 +1,28 @@
 .home-wrapper
   +outer-container
   display: flex
-  // min-height: 100vh
+  justify-content: center
+  align-items: center
 
 .home-sections
-  +span-columns(12)
+  +span-columns(4)
   display: flex
   flex-direction: column
   order: 0
 
+  +media($bp-mobile-s)
+    +span-columns(12)
   +media($bp-laptop)
     +span-columns(9)
+
+
+.home-wrapper header
+  // background: cyan
+  display: none
+  +media($bp-laptop)
+    +span-columns(3)
+
+.header-position
+  +span-columns(3)
+  margin-left: 24px
+  padding: 0 12px
