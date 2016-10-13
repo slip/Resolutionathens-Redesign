@@ -1,13 +1,39 @@
 .home-wrapper
   +outer-container
-  display: flex
-  // min-height: 100vh
+  background-color: $ResLightGray
 
 .home-sections
   +span-columns(12)
-  display: flex
-  flex-direction: column
-  order: 0
-
   +media($bp-laptop)
     +span-columns(9)
+    padding: 0 2em
+
+header
+  display: none
+
+  +media($bp-laptop)
+    // background: pink
+    height: 100vh
+    display: flex !important
+    flex-direction: column
+    justify-content: space-between
+    +span-columns(3)
+    // position: relative
+    // top: 0
+    // bottom: 0
+    // right: 0
+    padding: 32px 1em
+    background:
+      image: url(/assets/img/tile1-ik.svg)
+      repeat: repeat
+
+h1.logo
+  +hide-text
+  height: 80px
+  padding: 0
+  margin: 0
+  background:
+    image: url(/assets/img/resolution-logo.svg)
+    repeat: no-repeat
+    position: left
+    size: contain

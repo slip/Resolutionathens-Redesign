@@ -1,86 +1,18 @@
-.home-wrapper header
-  +span-columns(3)
-  display: none
-  padding: 2em 0
-  order: 1
-  background:
-    image: url(/assets/img/tile1-ik.svg)
-    repeat: repeat
+// .social-wrapper
+//   position: fixed
+//   bottom: 0
 
-  +media($bp-laptop)
-    display: block
+ul.social
+  list-style: none
 
+ul.social li
+  width: 30px
+  margin: 0 0.4em 0 0
+  display: inline-block
   a
-    padding: 0.25em
-
-  .header-position
-    +span-columns(3)
-    position: fixed
-    top: 32px
-    bottom: 32px
-    right: 0
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-
-    h1.logo
-      flex-shrink: 0
-      +hide-text
-      height: 80px
-      padding: 0
-      margin: 0
-      background:
-        image: url(/assets/img/resolution-logo.svg)
-        repeat: no-repeat
-        position: left
-        size: contain
-
-    ul.social
-      list-style: none
-      // text-align: center
-      // margin-left: -10%
-
-    ul.social li
+    img
+      +float-shadow
       width: 30px
-      margin: 0 0.4em 0 0
-      display: inline-block
-      a
-        img
-          +float-shadow
-          width: 30px
-
-  .site-nav
-    ul
-      list-style-position: inside
-      margin: 0
-      padding: 0
-      list-style: none
-      // text-align: center
-
-      li
-        margin-bottom: .75em
-        a
-          font-size: .75em
-          color: black
-          text-decoration: none
-          font-weight: bold
-          width: 100%
-
-          &:hover, &:active
-            color: transparentize($ResDarkGray, 0.3)
-            padding: .25em
-            background:
-              image: url(/assets/img/tile1-ik.svg)
-              repeat: repeat
-
-        a.active
-          color: white
-          background: transparentize($ResLightGray, 0.3)
-          pointer-events: none
-          cursor: default
-
-        &:last-child
-          margin-bottom: 0
 
 .header-intro
   // background-color: pink
